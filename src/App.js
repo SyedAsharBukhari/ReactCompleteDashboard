@@ -13,12 +13,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>      
-<Route path='/' element={<Loginpage/>}/>
-<Route path='/register' element={<Register/>}/>
-<Route path="dashboard/*" element={<Dashboard />}>
-            <Route path="data1" element={<Data1 />} />
-            <Route path="data2" element={<Data2 />} />
-          </Route>
+             <Route path='/' element={<Loginpage/>}/>
+             <Route path='/register' element={<Register/>}/> 
+             <Route path="dashboard/*" element={<Dashboard />}/>
 </Routes>
 </BrowserRouter>
     </div>

@@ -1,32 +1,27 @@
 import React from 'react'
-
-import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom'
+import { Link, Outlet, Route, Routes } from 'react-router-dom'
 import Data1 from '../Components/Sidebar/Data1'
 import Data2 from '../Components/Sidebar/Data2'
 
 function Dashboard() {
   return (
-    <div>
-<div className='flex'>
-<div className='w-[20%] h-[100vh] fixed bg-black'>
-<h1 className='text-white font-bold text-center mt-4 mb-4 text-3xl '>Dashboard</h1>
-<Link className='text-white' to={"/data1"}>Data1</Link>
-<br></br>
-<br></br>
-<br></br>
-        <Link className='text-white' to={"/data2"}>Data2</Link>
-  </div>  
+    <div className="flex min-h-screen">
+      {/* Sidebar */}
+      <div className="w-[240px] fixed top-0 left-0 h-full bg-black p-5">
+        <h1 className="text-white font-bold text-center mb-6 text-3xl">Dashboard</h1>
+        <nav className="flex flex-col gap-4">
+          <Link className="text-white hover:text-gray-400" to="/dashboard/data1">Data1</Link>
+          <Link className="text-white hover:text-gray-400" to="/dashboard/data2">Data2</Link>
+        </nav>
+      </div>
 
-<div className='w-[100%] h-[100vh]  bg-red-500'>
-<Outlet />
-</div>
-
-
-
-</div>
-
-
-
+      {/* Content Section */}
+      <div className="flex ml-[240px] w-[100%] p-6 bg-red-500 min-h-screen overflow-y-auto">
+        <Routes>
+          <Route path="/data1" element={<Data1 />} />
+          <Route path="/data2" element={<Data2 />} />
+        </Routes>
+      </div>
     </div>
   )
 }
