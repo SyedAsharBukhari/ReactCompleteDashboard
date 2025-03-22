@@ -16,7 +16,7 @@ function Dashboard() {
       </div>
 
       {/* Content Section */}
-      <div className="flex ml-[240px] w-[100%] p-6 bg-red-500 min-h-screen overflow-y-auto">
+      <div className="flex ml-[240px] w-[100%] p-6 min-h-screen overflow-y-auto">
         <Routes>
           <Route path="/data1" element={<Data1 />} />
           <Route path="/data2" element={<Data2 />} />
