@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import slice from './Slice'
+import sliceGetData from "./Slice";
 
 export const store = configureStore({
-    reducer:{
-        Newsdata: slice
-    }
-})
+  reducer: {
+    Newsdata: sliceGetData,
+  },
+});

@@ -11,7 +11,7 @@ function Dashboard() {
         <h1 className="text-white font-bold text-center mb-6 text-3xl">Dashboard</h1>
         <nav className="flex flex-col gap-4">
           <Link className="text-white hover:text-gray-400" to="/dashboard/data1">Data1</Link>
-          <Link className="text-white hover:text-gray-400" to="/dashboard/data2">Data2</Link>
+          <Link className="text-white hover:text-gray-400" to="/dashboard/data2">Current Headlines</Link>
         </nav>
       </div>
 
